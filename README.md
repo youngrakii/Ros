@@ -18,25 +18,14 @@ r3live 는 LiDAR, 관성 및 시각 센서의 측정을 활용하여 견고하�
 
 1. 하드웨어 만들기 전
 
-![KakaoTalk_20240713_101314233.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/5a90a36f-1b40-4281-b400-9b23755808aa/KakaoTalk_20240713_101314233.jpg)
-
-![KakaoTalk_20240713_101314233_01.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/71c8817c-8a21-4805-a7bb-a004ed55c9b3/KakaoTalk_20240713_101314233_01.jpg)
 
 1. Handheld 하드웨어에 탑재하여 Mapping을 진행하는 모습
 
-![KakaoTalk_20240718_200039089.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/927c9eae-a0e3-4b83-a98d-745d86a2344a/KakaoTalk_20240718_200039089.jpg)
 
-![KakaoTalk_20240718_200039089_02.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/936e047c-18a8-42a7-bdcf-50b6d50c681a/KakaoTalk_20240718_200039089_02.jpg)
 
 1. WeGo로봇에 탑재하여 Mapping을 진행하는 모습
 
-![KakaoTalk_20240717_213452276.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/e2dd8680-8cce-42a5-82e6-06bcfcc83bce/KakaoTalk_20240717_213452276.jpg)
 
-![KakaoTalk_20240717_213452276_01.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/5b015d6e-6ccb-47a3-8e19-ddbd235ced4d/KakaoTalk_20240717_213452276_01.jpg)
-
-![KakaoTalk_20240717_213452276_02.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/d3458344-8aad-4b50-92b4-b73c9ce1fe0c/KakaoTalk_20240717_213452276_02.jpg)
-
-![KakaoTalk_20240717_213452276_03.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/fdff902a-0aa8-437b-b55f-58841eb1c062/KakaoTalk_20240717_213452276_03.jpg)
 
 프로젝트 진행 준비 과정
 
@@ -96,14 +85,5 @@ r3live 는 LiDAR, 관성 및 시각 센서의 측정을 활용하여 견고하�
 - **향상된 정확도**: 두 센서의 데이터를 결합하면 더 높은 정확도의 3D 맵을 생성할 수 있습니다.
 - **다양한 환경 대응**: 다양한 환경에서 더 안정적이고 신뢰성 높은 데이터를 수집할 수 있습니다.
 
-[insert-image-url-here](insert-image-url-here)
+![다운로드](https://github.com/user-attachments/assets/2fcac290-3980-429a-83a0-e6446a53bcc9)
 
-## Camera calibration
-
-![cam_calibration.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/d517b789-284e-43b2-8fd1-4126c91e8abe/cam_calibration.png)
-
-**여러 각도에서 찍은 25장의 사진으로 진행함**
-
-![intrinsic_matrix1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/d2349953-7f39-48d5-ad91-a91b503c51d7/intrinsic_matrix1.png)
-
-**intrinsic matrix (camera parameters)**
