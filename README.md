@@ -98,3 +98,10 @@ r3live 는 LiDAR, 관성 및 시각 센서의 측정을 활용하여 견고하�
 
 이 프로젝트는 Livox Avia LiDAR와 Oak-D Pro 카메라를 함께 사용하여 고품질의 3D 재구성을 실현하는 것입니다. 두 장치의 데이터를 융합하여 더 정확하고 정밀한 3D 모델을 생성할 수 있습니다. 이를 통해 자율 주행, AR/VR 등 다양한 응용 분야에서 활용할 수 있는 실용적인 3D 맵을 제공합니다.
 
+<br><br><br><br>
+
+### 참고 자료료
+1. https://github.com/hku-mars/r3live
+2. https://github.com/Livox-SDK/livox_ros_driver
+3. https://github.com/luxonis/depthai-ros
+
