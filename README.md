@@ -1,2 +1,109 @@
-# Ros
+# 3D - Mapping 프로젝트
+
 Livox Avia와 OAK-D PRO를 이용한 실시간 mapping
+
+
+## 프로젝트 개요
+
+이 프로젝트는 Livox Avia LiDAR와 OAK-D Pro 카메라를 사용하여 r3live를 통해 3D 맵핑을 수행하는 것을 목표로 합니다. 
+r3live 는 LiDAR, 관성 및 시각 센서의 측정을 활용하여 견고하고 정확한 상태 추정을 달성하는 새로운 LiDAR-관성-시각 센서 융합 프레임워크입니다
+
+두 장치를 조합하여 LiDAR의 PointCloud 데이터와 카메라의 RGB 데이터를 활용해 더 정밀한 3D 환경 맵을 생성합니다.
+
+## 프로젝트 목적
+
+이 프로젝트의 주 목적은 Livox Avia LiDAR와 Oak-D Pro 카메라를 고품질의 3D 재구성하는 것입니다. 이를 통해 자율 주행 시뮬레이션, AR/VR 경험 등 다양한 응용 분야에서 실용적인 3D 모델을 제공하는 것을 목표로 합니다.
+
+## 프로젝트 진행 모습
+
+1. 하드웨어 만들기 전
+
+![KakaoTalk_20240713_101314233.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/5a90a36f-1b40-4281-b400-9b23755808aa/KakaoTalk_20240713_101314233.jpg)
+
+![KakaoTalk_20240713_101314233_01.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/71c8817c-8a21-4805-a7bb-a004ed55c9b3/KakaoTalk_20240713_101314233_01.jpg)
+
+1. Handheld 하드웨어에 탑재하여 Mapping을 진행하는 모습
+
+![KakaoTalk_20240718_200039089.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/927c9eae-a0e3-4b83-a98d-745d86a2344a/KakaoTalk_20240718_200039089.jpg)
+
+![KakaoTalk_20240718_200039089_02.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/936e047c-18a8-42a7-bdcf-50b6d50c681a/KakaoTalk_20240718_200039089_02.jpg)
+
+1. WeGo로봇에 탑재하여 Mapping을 진행하는 모습
+
+![KakaoTalk_20240717_213452276.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/e2dd8680-8cce-42a5-82e6-06bcfcc83bce/KakaoTalk_20240717_213452276.jpg)
+
+![KakaoTalk_20240717_213452276_01.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/5b015d6e-6ccb-47a3-8e19-ddbd235ced4d/KakaoTalk_20240717_213452276_01.jpg)
+
+![KakaoTalk_20240717_213452276_02.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/d3458344-8aad-4b50-92b4-b73c9ce1fe0c/KakaoTalk_20240717_213452276_02.jpg)
+
+![KakaoTalk_20240717_213452276_03.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/fdff902a-0aa8-437b-b55f-58841eb1c062/KakaoTalk_20240717_213452276_03.jpg)
+
+프로젝트 진행 준비 과정
+
+## 필요 구성 요소
+
+### 하드웨어
+
+- Livox Avia LiDAR
+- OAK-D Pro 카메라
+- ROS 지원 컴퓨터
+
+### 소프트웨어
+
+- Ubuntu 20.04
+- ROS Noetic
+- Livox ROS Driver
+- DepthAI ROS Driver
+- r3live
+- livox calibration
+
+### 사용 장비
+
+**1. Livox Avia LiDAR**
+
+- **특징**: 높은 정확도와 넓은 시야각을 제공하며, 이동 물체를 포함한 다양한 환경에서 포인트 클라우드 데이터를 수집할 수 있습니다.
+- **장점**:
+    - **고해상도 포인트 클라우드**: 정밀한 거리 측정과 함께 복잡한 구조를 세부적으로 캡처할 수 있습니다.
+    - **넓은 스캔 범위**: 70도 이상의 수평 및 수직 시야각을 제공하여 광범위한 영역을 커버할 수 있습니다.
+    - **실시간 데이터 처리**: 빠른 데이터 수집과 전송을 통해 실시간으로 포인트 클라우드를 생성할 수 있습니다.
+
+**2. Oak-D Pro 카메라**
+
+- **특징**: RGB-D 센서를 포함한 카메라로, 깊이 정보와 고해상도 RGB 이미지를 동시에 제공할 수 있습니다.
+- **장점**:
+    - **RGB-D 데이터 제공**: 고해상도의 컬러 이미지와 깊이 정보를 통해 더 풍부한 시각적 정보를 제공합니다.
+    - **내장 AI 프로세서**: 실시간으로 객체 인식 및 추적이 가능하여 복잡한 환경에서도 효과적으로 사용할 수 있습니다.
+    - **컴팩트 디자인**: 설치와 이동이 용이하며, 다양한 플랫폼에서 쉽게 통합할 수 있습니다.
+    
+
+## Livox Avia LiDAR와 OAK-D Pro 카메라를 함께 사용하는 이유
+
+### 1. Livox Avia LiDAR
+
+- **고정밀 거리 측정**: LiDAR는 레이저를 사용하여 매우 정밀한 거리 측정을 수행할 수 있습니다. 이는 3D 맵핑에서 매우 중요한 요소입니다.
+- **넓은 스캔 범위**: Livox Avia LiDAR는 넓은 스캔 범위를 가지고 있어 주변 환경의 3D 데이터를 광범위하게 수집할 수 있습니다.
+- **안정성**: 다양한 환경 조건에서도 안정적으로 작동합니다.
+
+### 2. OAK-D Pro 카메라
+
+- **RGB-D 데이터 제공**: RGB 카메라와 깊이 센서를 통합하여 고해상도 컬러 이미지와 깊이 데이터를 동시에 제공합니다.
+- **고성능 AI 처리**: 내장된 AI 칩셋을 통해 실시간으로 객체 인식 및 추적이 가능합니다.
+- **컴팩트하고 경량**: 설치와 사용이 용이하며, 이동성이 뛰어납니다.
+
+### 두 장치를 함께 사용하는 장점
+
+- **상호 보완적 데이터**: LiDAR와 카메라 데이터는 상호 보완적입니다. LiDAR는 정확한 거리 데이터를 제공하고, 카메라는 컬러 및 깊이 정보를 제공합니다.
+- **향상된 정확도**: 두 센서의 데이터를 결합하면 더 높은 정확도의 3D 맵을 생성할 수 있습니다.
+- **다양한 환경 대응**: 다양한 환경에서 더 안정적이고 신뢰성 높은 데이터를 수집할 수 있습니다.
+
+[insert-image-url-here](insert-image-url-here)
+
+## Camera calibration
+
+![cam_calibration.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/d517b789-284e-43b2-8fd1-4126c91e8abe/cam_calibration.png)
+
+**여러 각도에서 찍은 25장의 사진으로 진행함**
+
+![intrinsic_matrix1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fb71e43-4c41-4afb-84b4-09606f414439/d2349953-7f39-48d5-ad91-a91b503c51d7/intrinsic_matrix1.png)
+
+**intrinsic matrix (camera parameters)**
