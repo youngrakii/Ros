@@ -3,6 +3,10 @@
 Livox Avia와 OAK-D PRO를 이용한 실시간 mapping
 
 
+
+
+
+
 ## 프로젝트 개요
 
 이 프로젝트는 Livox Avia LiDAR와 OAK-D Pro 카메라를 사용하여 r3live를 통해 3D 맵핑을 수행하는 것을 목표로 합니다. 
