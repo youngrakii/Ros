@@ -24,6 +24,8 @@ r3live 는 LiDAR, 관성 및 시각 센서의 측정을 활용하여 견고하�
 1. Handheld 하드웨어에 탑재하여 Mapping을 진행하는 모습
 <img src="https://github.com/user-attachments/assets/cb155adb-03fa-4248-8c12-d5f06871df03" width="400" height="500"/>
 
+<br>
+
 3. WeGo로봇에 탑재하여 Mapping을 진행하는 모습
 <img src="https://github.com/user-attachments/assets/1f4e357e-0b7d-4248-af88-2b68ab28e96c" width="400" height="500"/>
 
