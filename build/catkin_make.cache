@@ -1,0 +1,2 @@
+depthai-ros/depthai-ros:depthai-ros/depthai_bridge:depthai-ros/depthai_descriptions:depthai-ros/depthai_examples:depthai-ros/depthai_filters:depthai-ros/depthai_ros_driver:depthai-ros/depthai_ros_msgs:livox_camera_calib:livox_ros_driver_for_R2LIVE/livox_ros_driver:my:r3live/r3live
+-DCATKIN_DEVEL_PREFIX=/home/tony/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tony/catkin_ws/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/tony/catkin_ws/devel
+
+Name: my
+Description: Description of my
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

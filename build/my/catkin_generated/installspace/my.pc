@@ -1,0 +1,8 @@
+prefix=/home/tony/catkin_ws/install
+
+Name: my
+Description: Description of my
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
